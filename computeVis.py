@@ -10,10 +10,10 @@ from tqdm import tqdm
 
 
 ### REPLACE WITH YOUR FILES HERE
-data_dir = "/data/pemami/iccv2019/KingsCollege/"
+data_dir = ""
 inputFile = data_dir + "reconstruction.nvm"
 trainSet = data_dir + "train/dataset_train.txt"
-testSet = data_dir + "train/dataset_test.txt"
+testSet = data_dir + "test/dataset_test.txt"
 
 ###################################################################
 # Parse the .nvm file
