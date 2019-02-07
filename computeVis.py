@@ -7,13 +7,19 @@ import os.path
 import pickle
 import numpy as np
 from tqdm import tqdm
-
+from shutil import copyfile
 
 ### REPLACE WITH YOUR FILES HERE
-data_dir = "/data/pemami/iccv2019/KingsCollege/"
+data_dir = "/data/pemami/iccv2019/ShopFacade/"
 inputFile = data_dir + "reconstruction.nvm"
 trainSet = data_dir + "train/dataset_train.txt"
-testSet = data_dir + "train/dataset_test.txt"
+testSet = data_dir + "test/dataset_test.txt"
+if not os.path.exists(os.path.join(data_dir, "train")):
+    os.makedirs(os.path.join(data_dir, "train"))
+    copyfile(os.path.join(data_dir, "dataset_train.txt"), os.path.join(data_dir, "train", "dataset_train.txt"))
+if not os.path.exists(os.path.join(data_dir, "test")):
+    os.makedirs(os.path.join(data_dir, "test"))
+    copyfile(os.path.join(data_dir, "dataset_test.txt"), os.path.join(data_dir, "train", "dataset_test.txt"))
 
 ###################################################################
 # Parse the .nvm file
