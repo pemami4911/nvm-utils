@@ -9,8 +9,9 @@ import numpy as np
 from tqdm import tqdm
 from shutil import copyfile
 
-### REPLACE WITH YOUR FILES HERE
-data_dir = "/data/pemami/iccv2019/ShopFacade/"
+### REPLACE WITH YOUR DATA DIR HERE
+data_dir = "YOUR_PATH_TO_CAMBRDIGE_LANDMARK_DATASET/ShopFacade/"
+
 inputFile = data_dir + "reconstruction.nvm"
 trainSet = data_dir + "train/dataset_train.txt"
 testSet = data_dir + "test/dataset_test.txt"
